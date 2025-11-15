@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # AWS Cloud Club IIT Madras Website
 
 A modern, responsive website for AWS Cloud Club IIT Madras built with Next.js 15, TypeScript, and Shadcn UI.
@@ -116,3 +117,6 @@ For questions or issues, contact the AWS Cloud Club IIT Madras team:
 ---
 
 Built with ❤️ by AWS Cloud Club IIT Madras
+=======
+# webops
+>>>>>>> fbe2d7a62c58affe4ead79d7c3087e3e6d46bf66

@@ -4,48 +4,105 @@ import { Button } from "@/components/ui/button";
 import { Calendar, MapPin, Clock, Users, Youtube, Github } from "lucide-react";
 
 const upcomingEvents = [
-
   {
-    title: "Cloud Security Best Practices",
-    date: "December 22, 2025",
-    time: "3:00 PM - 5:00 PM",
+    title: "Agentic AI with AWS",
+    date: "January 2026",
+    time: "TBD",
     location: "Online",
-    type: "Webinar",
-    attendees: 100,
-    description: "Expert session on securing your AWS infrastructure with IAM, VPC, and security groups.",
+    type: "Workshop",
+    attendees: 500,
+    description: "Deep dive into building autonomous agents using AWS Bedrock and Amazon Q.",
   },
   {
-    title: "Serverless Architecture Hackathon",
-    date: "January 10, 2026",
-    time: "9:00 AM - 6:00 PM",
-    location: "BSB Building, IIT Madras",
-    type: "Hackathon",
-    attendees: 80,
-    description: "24-hour hackathon focused on building serverless applications using AWS Lambda and API Gateway.",
+    title: "Machine Learning with AWS",
+    date: "January 2026",
+    time: "TBD",
+    location: "Online",
+    type: "Workshop",
+    attendees: 500,
+    description: "Comprehensive session on ML pipelines, SageMaker, and deploying models on AWS.",
   },
 ];
 
 const pastEvents = [
   {
-    title: "Introduction to AWS Cloud",
-    date: "November 5, 2025",
+    title: "Hands on Workshop: Build with Amazon Q CLI & Amazon Bedrock",
+    date: "August 23, 2025",
     type: "Workshop",
-    attendees: 60,
-    description: "Introductory workshop covering AWS basics and account setup.",
+    attendees: 117,
+    description: "Master GenAI with Amazon Q CLI. Explore real-world use cases and practice live with experts.",
+    host: "Sujit Laware",
+    speaker: "Danny Chan",
+    speakerRole: "AWS Community Day Ambassador",
+    videoLink: "https://www.youtube.com/watch?v=4lCMV4Tkpgw",
   },
   {
-    title: "Machine Learning on AWS",
-    date: "October 20, 2025",
+    title: "Build Applications with Amazon Bedrock, Agents & Strands",
+    date: "August 19, 2025",
     type: "Workshop",
-    attendees: 45,
-    description: "Hands-on session with Amazon SageMaker and ML services.",
+    attendees: 50,
+    description: "Build agentic AI applications with Amazon Bedrock. Learn about foundation models, AI agents, and Strands live.",
+    host: "Sujit Laware",
+    speaker: "Shubham Londhe",
+    speakerRole: "Developer Advocate @AWS",
+    videoLink: "https://www.youtube.com/watch?v=Fb7nzQ36SnQ&pp=0gcJCU0KAYcqIYzv",
   },
   {
-    title: "DevOps with AWS",
-    date: "October 10, 2025",
-    type: "Workshop",
-    attendees: 55,
-    description: "CI/CD pipelines using AWS CodePipeline and CodeDeploy.",
+    title: "CLOUD 101: Your Gateway to AWS",
+    date: "April 6, 2025",
+    type: "Webinar",
+    attendees: 65,
+    description: "Kickstart your cloud journey. Learn AWS core services, pricing models, architecture basics, and career opportunities.",
+    host: "Sujit Laware",
+    speaker: "Indranil Bhattacharyya",
+    speakerRole: "Data Scientist, RNTBCI",
+    videoLink: "https://www.youtube.com/watch?v=Vvkz0AYrYHE",
+  },
+  {
+    title: "AWS DeepRacer Virtual Race March'25 Edition",
+    date: "March 9, 2025",
+    type: "Competition",
+    attendees: 22,
+    description: "Thrilling autonomous racing competition testing skills in designing and training reinforcement learning models.",
+    host: "Indranil B. & Sujit L.",
+    speaker: null,
+  },
+  {
+    title: "AWS Exam Slam - Cloud Practitioner",
+    date: "December 10, 2024",
+    type: "Webinar",
+    attendees: 100,
+    description: "Kickstarted cloud journeys with an exam overview, tips from experts, and a challenge to win 100% discount vouchers.",
+    host: "Indranil B.",
+    speaker: null,
+  },
+  {
+    title: "AWS DeepRacer Virtual Race Sep'24",
+    date: "September 22, 2024",
+    type: "Competition",
+    attendees: 33,
+    description: "Thrilling autonomous racing competition using reinforcement learning models on the AWS DeepRacer simulator.",
+    host: "Indranil B.",
+    speaker: null,
+  },
+  {
+    title: "AWS DeepRacer Virtual Race May'24",
+    date: "May 5, 2024",
+    type: "Competition",
+    attendees: 9,
+    description: "Hands-on machine learning competition where students designed and trained self-driving car models.",
+    host: "Indranil B.",
+    speaker: null,
+  },
+  {
+    title: "AWS Cloud Club Orientation Session",
+    date: "January 14, 2024",
+    type: "Keynote",
+    attendees: 14,
+    description: "Inaugural session featuring Stephen Howell from AWS Academic Advocacy, exploring cloud services and club roadmap.",
+    videoLink: "https://www.youtube.com/live/omqduizJyiM?si=8oj9EdBRSLsXQamX",
+    host: "Indranil B.",
+    speaker: "Stephen Howell",
   },
 ];
 
@@ -136,13 +193,33 @@ export default function EventsPage() {
                     <Users size={18} />
                     <span className="font-medium">{event.attendees} attendees</span>
                   </div>
+                  {/* @ts-ignore */}
+                  {event.host && (
+                    <div className="text-sm text-gray-600 mt-2">
+                      <span className="font-bold text-black">Host:</span> {event.host}
+                    </div>
+                  )}
+                  {/* @ts-ignore */}
+                  {event.speaker && (
+                    <div className="text-sm text-gray-600">
+                      <span className="font-bold text-black">Speaker:</span> {event.speaker}
+                      {/* @ts-ignore */}
+                      {event.speakerRole && <div className="text-xs text-gray-500">{event.speakerRole}</div>}
+                    </div>
+                  )}
 
                   {/* Action Buttons */}
                   <div className="flex gap-3 pt-4">
-                    <Button variant="outline" size="sm" className="flex-1 hover:bg-red-50 hover:border-red-300 group">
-                      <Youtube size={20} className="mr-2 text-red-600 group-hover:text-red-700" />
-                      <span className="text-black group-hover:text-red-700">Recording</span>
-                    </Button>
+                    {/* @ts-ignore */}
+                    {event.videoLink && (
+                      <Button variant="outline" size="sm" className="flex-1 hover:bg-red-50 hover:border-red-300 group" asChild>
+                        {/* @ts-ignore */}
+                        <a href={event.videoLink} target="_blank" rel="noopener noreferrer">
+                          <Youtube size={20} className="mr-2 text-red-600 group-hover:text-red-700" />
+                          <span className="text-black group-hover:text-red-700">Recording</span>
+                        </a>
+                      </Button>
+                    )}
                     <Button variant="outline" size="sm" className="flex-1 hover:bg-gray-50 hover:border-gray-400 group">
                       <Github size={20} className="mr-2 text-black group-hover:text-black" />
                       <span className="text-black group-hover:text-black">Resources</span>

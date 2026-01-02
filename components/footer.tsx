@@ -12,8 +12,12 @@ export default function Footer() {
           {/* About */}
           <div className="col-span-1 md:col-span-2">
             <Link href="/" className="flex items-center gap-3 mb-6 group">
-              <div className="w-10 h-10 rounded-full bg-[#FF9900] flex items-center justify-center shadow-[0_4px_12px_rgba(255,153,0,0.3)] group-hover:shadow-[0_6px_16px_rgba(255,153,0,0.5)] transition-all duration-300">
-                <span className="text-white font-black text-xl">A</span>
+              <div className="relative">
+                <img
+                  src="/logo.jpg"
+                  alt="AWS Cloud Club IIT Madras"
+                  className="w-12 h-12 rounded-full border-2 border-transparent group-hover:border-[#FF9900] transition-all object-cover"
+                />
               </div>
               <div>
                 <div className="font-black text-black text-xl tracking-tight leading-none group-hover:text-[#FF9900] transition-colors">AWS CLOUD CLUB</div>

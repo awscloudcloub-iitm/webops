@@ -95,17 +95,22 @@ export default function TeamPage() {
   const currentTeam = teams[selectedYear];
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col pt-20">
       {/* Hero Section */}
-      <section className="bg-gray-900 text-white py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-sm font-medium text-[#FF9900] mb-4 uppercase tracking-wide">Team</div>
-            <h1 className="text-4xl md:text-5xl font-light mb-6 text-white">
-              Meet the team
+      <section className="relative pt-2 pb-20 px-4 md:pt-8 md:pb-32 overflow-hidden bg-white">
+        <div className="absolute inset-0 bg-gradient-to-b from-blue-50 to-transparent pointer-events-none"></div>
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-gray-200 shadow-sm mb-6">
+              <span className="flex h-2 w-2 rounded-full bg-blue-500 animate-pulse"></span>
+              <span className="text-sm font-bold text-black tracking-wide uppercase">The Squad</span>
+            </div>
+            <h1 className="text-5xl md:text-7xl font-black mb-6 text-black tracking-tighter">
+              MEET THE <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500 animate-gradient">FUTURE</span>
             </h1>
-            <p className="text-xl text-gray-300 font-light">
-              Students passionate about cloud computing and AWS technologies.
+            <p className="text-xl text-black font-medium max-w-2xl mx-auto leading-relaxed">
+              Passionate students building the next generation of cloud architects and engineers.
             </p>
           </div>
         </div>
@@ -124,7 +129,7 @@ export default function TeamPage() {
             </Button>
             <Button
               variant={selectedYear === "2024-25" ? "default" : "outline"}
-              onClick={() => setSelectedYear("2024-25")}  
+              onClick={() => setSelectedYear("2024-25")}
               className={selectedYear === "2024-25" ? "bg-[#FF9900] hover:bg-[#E6890A]" : ""}
             >
               2024-25
@@ -157,13 +162,13 @@ export default function TeamPage() {
                 <CardContent className="text-center">
                   <CardDescription>{member.description}</CardDescription>
                   <div className="flex justify-center gap-3 mt-4">
-                    <a href="#" className="text-gray-600 hover:text-[#FF9900] transition-colors">
+                    <a href="#" className="text-black hover:text-[#FF9900] transition-colors">
                       <Linkedin size={18} />
                     </a>
-                    <a href="#" className="text-gray-600 hover:text-[#FF9900] transition-colors">
+                    <a href="#" className="text-black hover:text-[#FF9900] transition-colors">
                       <Github size={18} />
                     </a>
-                    <a href="#" className="text-gray-600 hover:text-[#FF9900] transition-colors">
+                    <a href="#" className="text-black hover:text-[#FF9900] transition-colors">
                       <Mail size={18} />
                     </a>
                   </div>
@@ -205,15 +210,15 @@ export default function TeamPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-6">Want to Join Our Team?</h2>
-            <p className="text-lg text-gray-700 mb-8">
-              We're always looking for passionate students who want to contribute to the AWS Cloud Club 
-              community. Whether you're interested in organizing events, creating content, or leading 
+            <p className="text-lg text-black mb-8">
+              We're always looking for passionate students who want to contribute to the AWS Cloud Club
+              community. Whether you're interested in organizing events, creating content, or leading
               technical workshops, there's a place for you!
             </p>
             <Card className="bg-gradient-to-br from-orange-50 to-blue-50 border-2 border-orange-200">
               <CardContent className="pt-6">
-                <p className="text-gray-700 mb-4">
-                  Recruitment announcements are made at the beginning of each semester. 
+                <p className="text-black mb-4">
+                  Recruitment announcements are made at the beginning of each semester.
                   Follow us on social media to stay updated!
                 </p>
                 <div className="flex justify-center gap-4">

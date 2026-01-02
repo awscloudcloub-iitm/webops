@@ -102,7 +102,7 @@ export default function Chatbot() {
                   className={`max-w-[80%] rounded-2xl px-4 py-2 ${
                     message.role === "user"
                       ? "bg-gradient-to-r from-orange-600 to-orange-700 text-white"
-                      : "bg-gray-100 text-gray-800"
+                      : "bg-gray-100 text-black"
                   }`}
                 >
                   <p className="text-sm">{message.content}</p>

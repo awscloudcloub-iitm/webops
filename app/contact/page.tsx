@@ -20,7 +20,14 @@ export default function ContactPage() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log("Form submitted:", formData);
-    alert("Thanks for reaching out! We'll get back to you soon.");
+
+    // Construct mailto link
+    const mailtoLink = `mailto:cloudcoders@study.iitm.ac.in?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`)}`;
+
+    // Open mail client
+    window.location.href = mailtoLink;
+
+    alert("Opening your email client to send the message...");
     setFormData({ name: "", email: "", subject: "", message: "" });
   };
 
@@ -134,7 +141,7 @@ export default function ContactPage() {
                       </div>
                       <div>
                         <CardTitle className="text-base">Email</CardTitle>
-                        <CardDescription className="text-sm">awscloudclub@iitm.ac.in</CardDescription>
+                        <CardDescription className="text-sm">cloudcoders@study.iitm.ac.in</CardDescription>
                       </div>
                     </div>
                   </CardHeader>
@@ -149,26 +156,13 @@ export default function ContactPage() {
                       <div>
                         <CardTitle className="text-base">Location</CardTitle>
                         <CardDescription className="text-sm">
-                          IIT Madras Campus<br />
-                          Chennai, Tamil Nadu 600036
+                          We operate remotely
                         </CardDescription>
                       </div>
                     </div>
                   </CardHeader>
                 </Card>
 
-                <div className="mt-6">
-                  <h3 className="text-lg font-semibold mb-3 text-black">Meet Us</h3>
-                  <Card>
-                    <CardContent className="pt-4">
-                      <div className="space-y-1.5 text-black text-sm">
-                        <p><strong>Thursday evenings:</strong> CSE Block</p>
-                        <p><strong>Time:</strong> 6:00 PM - 8:00 PM</p>
-                        <p className="text-xs text-black mt-2">Check our events page for specific room numbers</p>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </div>
               </div>
             </div>
           </div>

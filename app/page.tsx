@@ -57,9 +57,9 @@ export default function Home() {
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
-              { label: "Active Members", value: "200+", color: "text-orange-600" },
-              { label: "Events Held", value: "30+", color: "text-blue-600" },
-              { label: "Tech Sessions", value: "25+", color: "text-green-600" },
+              { label: "Active Members", value: "900+", color: "text-orange-600" },
+              { label: "Events Held", value: "10+", color: "text-blue-600" },
+              { label: "Tech Sessions", value: "10+", color: "text-green-600" },
               { label: "Partners", value: "10+", color: "text-purple-600" }
             ].map((stat, i) => (
               <div key={i} className="flex flex-col items-center justify-center text-center group cursor-default">

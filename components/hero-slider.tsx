@@ -13,12 +13,13 @@ export default function HeroSlider() {
             category: "Identity",
             color: "text-black",
             content: (
-                <div className="h-full w-full bg-[#FF9900]/5 flex items-center justify-center relative overflow-hidden">
+                <div className="h-full w-full relative overflow-hidden">
+                    <div className="absolute inset-0 bg-[#FF9900]/10 mix-blend-overlay z-10"></div>
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
-                        src="/logo.jpg"
-                        alt="Logo"
-                        className="w-32 h-32 object-cover rounded-full shadow-lg"
+                        src="/event_1.jpg"
+                        alt="AWS Cloud Club"
+                        className="w-full h-full object-contain"
                     />
                     <div className="absolute top-4 right-4 bg-white/80 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-[#FF9900]">
                         EST. 2024
@@ -36,9 +37,9 @@ export default function HeroSlider() {
                     <div className="absolute inset-0 bg-blue-500/10 mix-blend-overlay z-10"></div>
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
-                        src="/networking.png"
+                        src="/event_2.jpg"
                         alt="Community Networking"
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-contain"
                     />
                 </div>
             ),
@@ -53,9 +54,9 @@ export default function HeroSlider() {
                     <div className="absolute inset-0 bg-purple-500/10 mix-blend-overlay z-10"></div>
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
-                        src="/speaker.png"
+                        src="/event_3.jpg"
                         alt="Tech Speaker"
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-contain"
                     />
                 </div>
             ),
@@ -70,9 +71,9 @@ export default function HeroSlider() {
                     <div className="absolute inset-0 bg-orange-500/10 mix-blend-overlay z-10"></div>
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
-                        src="/hackathon.png"
+                        src="/event_4.jpg"
                         alt="Hackathon Team"
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-contain"
                     />
                 </div>
             ),
@@ -87,9 +88,43 @@ export default function HeroSlider() {
                     <div className="absolute inset-0 bg-green-500/10 mix-blend-overlay z-10"></div>
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
-                        src="/workshop.png"
+                        src="/event_5.jpg"
                         alt="Coding Workshop"
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-contain"
+                    />
+                </div>
+            ),
+        },
+        {
+            id: 5,
+            title: "Tech Sessions",
+            category: "Knowledge",
+            color: "text-red-600",
+            content: (
+                <div className="h-full w-full relative overflow-hidden">
+                    <div className="absolute inset-0 bg-red-500/10 mix-blend-overlay z-10"></div>
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                        src="/event_6.jpg"
+                        alt="Tech Sessions"
+                        className="w-full h-full object-contain"
+                    />
+                </div>
+            ),
+        },
+        {
+            id: 6,
+            title: "Future Ready",
+            category: "Innovation",
+            color: "text-indigo-600",
+            content: (
+                <div className="h-full w-full relative overflow-hidden">
+                    <div className="absolute inset-0 bg-indigo-500/10 mix-blend-overlay z-10"></div>
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                        src="/event_7.jpg"
+                        alt="Future Ready"
+                        className="w-full h-full object-contain"
                     />
                 </div>
             ),

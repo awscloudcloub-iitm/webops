@@ -2,9 +2,12 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 
 export default function AboutPage() {
   return (
-    <div className="flex flex-col pt-20">
+    <div className="flex flex-col pt-20 bg-white">
+      {/* Scrolling Grid Background */}
+      <div className="scrolling-grid"></div>
+
       {/* Hero Section */}
-      <section className="relative pt-2 pb-20 px-4 md:pt-8 md:pb-32 overflow-hidden bg-white">
+      <section className="relative pt-2 pb-10 px-4 md:pt-8 md:pb-12 overflow-hidden bg-white">
         <div className="absolute inset-0 bg-gradient-to-b from-blue-50 to-transparent pointer-events-none"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
@@ -17,7 +20,7 @@ export default function AboutPage() {
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500 animate-gradient">REVOLUTION</span>
             </h1>
             <p className="text-xl text-black font-medium max-w-2xl mx-auto leading-relaxed">
-              Founded in 2023 at IIT Madras. We organize workshops, study groups, and hackathons to help students learn AWS technologies and advance their careers.
+              Founded in 2024 at IIT Madras. We organize workshops, study groups, and hackathons to help students learn AWS technologies and advance their careers.
             </p>
           </div>
         </div>
@@ -30,21 +33,22 @@ export default function AboutPage() {
             <h2 className="text-3xl font-light mb-12 text-black">What we do</h2>
             <div className="space-y-12">
               <div className="border-l-4 border-[#FF9900] pl-8">
-                <h3 className="text-xl font-medium mb-3 text-black">Weekly workshops</h3>
+                <h3 className="text-xl font-medium mb-3 text-black">Monthly Workshops</h3>
                 <p className="text-black leading-relaxed">
-                  Every week, we cover a different AWS service or concept. Recent topics include Lambda functions, DynamoDB, CI/CD with CodePipeline, and container orchestration with ECS.
+                  We organize monthly workshops covering different AWS services and concepts. Topics include Lambda functions, DynamoDB, CI/CD with CodePipeline, and container orchestration with ECS.
                 </p>
               </div>
               <div className="border-l-4 border-gray-200 pl-8">
-                <h3 className="text-xl font-medium mb-3 text-black">Certification study groups</h3>
+                <h3 className="text-xl font-medium mb-3 text-black">Certification Roadmap</h3>
                 <p className="text-black leading-relaxed">
-                  Preparing for AWS certifications? Join our study groups where we go through practice questions, discuss tricky concepts, and share study strategies.
+                  We guide you through certification roadmaps for different career paths.{' '}
+                  <a href="/resources" className="text-[#FF9900] font-semibold hover:underline">View certification paths →</a>
                 </p>
               </div>
               <div className="border-l-4 border-gray-200 pl-8">
-                <h3 className="text-xl font-medium mb-3 text-black">Hackathons & projects</h3>
+                <h3 className="text-xl font-medium mb-3 text-black">Hackathons & Hands-on Projects</h3>
                 <p className="text-black leading-relaxed">
-                  We organize monthly hackathons where teams build full applications on AWS. Past projects include serverless APIs, ML-powered chatbots, and data pipelines.
+                  We organize hackathons and hands-on projects where teams build real applications on AWS.
                 </p>
               </div>
             </div>
@@ -71,8 +75,8 @@ export default function AboutPage() {
                 <p className="text-black">Deploy with Docker, ECS, and Kubernetes (EKS).</p>
               </div>
               <div>
-                <h3 className="font-semibold mb-2 text-black">Machine Learning</h3>
-                <p className="text-black">Use SageMaker for training and deploying ML models.</p>
+                <h3 className="font-semibold mb-2 text-black">AI & Machine Learning</h3>
+                <p className="text-black">Build with Amazon Bedrock, SageMaker, and generative AI services.</p>
               </div>
               <div>
                 <h3 className="font-semibold mb-2 text-black">DevOps Practices</h3>
@@ -93,7 +97,7 @@ export default function AboutPage() {
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-6 text-black">Join Us</h2>
             <p className="text-xl text-black mb-8 leading-relaxed">
-              Whether you're completely new to cloud or already have some experience, you're welcome here. We meet every Thursday evening in the CSE block.
+              Whether you're completely new to cloud or already have some experience, you're welcome here.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a

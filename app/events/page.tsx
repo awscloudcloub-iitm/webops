@@ -108,9 +108,12 @@ const pastEvents = [
 
 export default function EventsPage() {
   return (
-    <div className="flex flex-col pt-20">
+    <div className="flex flex-col pt-20 bg-white">
+      {/* Scrolling Grid Background */}
+      <div className="scrolling-grid"></div>
+
       {/* Hero Section */}
-      <section className="relative pt-2 pb-20 px-4 md:pt-8 md:pb-32 overflow-hidden bg-white">
+      <section className="relative pt-2 pb-10 px-4 md:pt-8 md:pb-12 overflow-hidden bg-white">
         <div className="absolute inset-0 bg-gradient-to-b from-blue-50 to-transparent pointer-events-none"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
@@ -135,7 +138,7 @@ export default function EventsPage() {
           <h2 className="text-3xl font-bold mb-12 text-black">Coming Up</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl">
             {upcomingEvents.map((event, index) => (
-              <Card key={index} className="hover:shadow-md transition-shadow">
+              <Card key={index} className="hover:shadow-lg transition-all border-2 border-[#FF9900]">
                 <CardHeader>
                   <div className="flex justify-between items-start mb-2">
                     <Badge variant="secondary">{event.type}</Badge>
@@ -178,7 +181,7 @@ export default function EventsPage() {
           <h2 className="text-3xl font-bold mb-12 text-black">Past Events</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pastEvents.map((event, index) => (
-              <Card key={index} className="hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+              <Card key={index} className="hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 border-2 border-[#FF9900]">
                 <CardHeader>
                   <Badge variant="outline" className="w-fit mb-3">{event.type}</Badge>
                   <CardTitle className="text-xl mb-2">{event.title}</CardTitle>

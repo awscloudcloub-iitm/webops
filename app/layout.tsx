@@ -3,6 +3,7 @@ import { JetBrains_Mono, Outfit } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
+import LoadingScreen from "@/components/loading-screen";
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -20,9 +21,9 @@ export const metadata: Metadata = {
   title: "AWS Cloud Club IIT Madras",
   description: "Empowering students in cloud computing, AI, ML, and DevOps through hands-on experience and expert-led workshops.",
   icons: {
-    icon: '/logo.jpg',
-    shortcut: '/logo.jpg',
-    apple: '/logo.jpg',
+    icon: '/aws-logo.jpg',
+    shortcut: '/aws-logo.jpg',
+    apple: '/aws-logo.jpg',
   },
 };
 
@@ -34,6 +35,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${outfit.variable} ${jetbrainsMono.variable} antialiased font-sans`}>
+        <LoadingScreen />
         <Navbar />
         <main className="min-h-screen">
           {children}

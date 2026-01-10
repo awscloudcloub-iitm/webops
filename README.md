@@ -1,9 +1,8 @@
-<<<<<<< HEAD
 # AWS Cloud Club IIT Madras Website
 
 A modern, responsive website for AWS Cloud Club IIT Madras built with Next.js 15, TypeScript, and Shadcn UI.
 
-## 🚀 Features
+## Features
 
 - **Modern Tech Stack**: Built with Next.js 15, React, TypeScript, and Tailwind CSS
 - **Beautiful UI**: Styled with Shadcn UI components
@@ -17,12 +16,12 @@ A modern, responsive website for AWS Cloud Club IIT Madras built with Next.js 15
   - Resources - Learning materials and certification paths
   - Contact - Contact form and information
 
-## 📋 Prerequisites
+## Prerequisites
 
 - Node.js 18+ installed
 - npm or yarn package manager
 
-## 🏃‍♂️ Running the Development Server
+## Running the Development Server
 
 Start the development server:
 
@@ -32,7 +31,7 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) in your browser to see the website.
 
-## 📦 Build for Production
+## Build for Production
 
 Build the optimized production version:
 
@@ -46,7 +45,7 @@ Start the production server:
 npm start
 ```
 
-## 🎨 Customization
+## Customization
 
 ### Update Content
 
@@ -63,7 +62,7 @@ npm start
 - **Navbar**: Edit `components/navbar.tsx`
 - **Footer**: Edit `components/footer.tsx`
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 webops/
@@ -84,14 +83,14 @@ webops/
 └── public/             # Static assets
 ```
 
-## 🔧 Available Scripts
+## Available Scripts
 
 - `npm run dev` - Start development server
 - `npm run build` - Build for production
 - `npm start` - Start production server
 - `npm run lint` - Run ESLint
 
-## 🎯 Next Steps
+## Next Steps
 
 1. **Add Images**: Place club photos, logos, and team member photos in the `public/` directory
 2. **Update Team Data**: Replace placeholder team member names with actual members
@@ -100,7 +99,7 @@ webops/
 5. **Add Blog Content**: Create actual blog posts with real content
 6. **Deploy**: Deploy to Vercel, Netlify, or your preferred hosting platform
 
-## 🚀 Deployment
+## Deployment
 
 ### Deploy to Vercel (Recommended)
 
@@ -109,7 +108,7 @@ webops/
 3. Import your repository
 4. Deploy with one click
 
-## 📞 Support
+## Support
 
 For questions or issues, contact the AWS Cloud Club IIT Madras team:
 - Email: awscloudclub@iitm.ac.in
@@ -117,6 +116,3 @@ For questions or issues, contact the AWS Cloud Club IIT Madras team:
 ---
 
 Built with ❤️ by AWS Cloud Club IIT Madras
-=======
-# webops
->>>>>>> fbe2d7a62c58affe4ead79d7c3087e3e6d46bf66

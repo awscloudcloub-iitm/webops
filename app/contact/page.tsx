@@ -39,9 +39,12 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="flex flex-col pt-20">
+    <div className="flex flex-col pt-20 bg-white">
+      {/* Scrolling Grid Background */}
+      <div className="scrolling-grid"></div>
+
       {/* Hero Section */}
-      <section className="relative pt-2 pb-20 px-4 md:pt-8 md:pb-32 overflow-hidden bg-white">
+      <section className="relative pt-2 pb-10 px-4 md:pt-8 md:pb-12 overflow-hidden bg-white">
         <div className="absolute inset-0 bg-gradient-to-b from-blue-50 to-transparent pointer-events-none"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
@@ -65,7 +68,7 @@ export default function ContactPage() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
             {/* Contact Form */}
-            <div>
+            <div className="border-2 border-[#FF9900] rounded-xl p-6 bg-white shadow-lg">
               <h2 className="text-3xl font-bold mb-6 text-black">Send a Message</h2>
               <form onSubmit={handleSubmit} className="space-y-5">
                 <div>
@@ -133,7 +136,7 @@ export default function ContactPage() {
             <div>
               <h2 className="text-3xl font-bold mb-6 text-black">Contact Info</h2>
               <div className="space-y-5">
-                <Card>
+                <Card className="border-2 border-[#FF9900] hover:shadow-lg transition-all">
                   <CardHeader>
                     <div className="flex items-center gap-3">
                       <div className="p-2 bg-gray-100 rounded">
@@ -147,7 +150,7 @@ export default function ContactPage() {
                   </CardHeader>
                 </Card>
 
-                <Card>
+                <Card className="border-2 border-[#FF9900] hover:shadow-lg transition-all">
                   <CardHeader>
                     <div className="flex items-center gap-3">
                       <div className="p-2 bg-gray-100 rounded">
@@ -192,7 +195,7 @@ export default function ContactPage() {
                 answer: "We meet weekly on Thursdays, plus occasional weekend hackathons and workshops.",
               },
             ].map((faq, index) => (
-              <Card key={index}>
+              <Card key={index} className="border-2 border-[#FF9900] hover:shadow-lg transition-all">
                 <CardHeader>
                   <CardTitle className="text-base">{faq.question}</CardTitle>
                   <CardDescription className="text-sm">{faq.answer}</CardDescription>

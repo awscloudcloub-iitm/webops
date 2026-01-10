@@ -3,9 +3,12 @@ import { Github, Linkedin, Twitter, Mail } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="relative bg-white border-t border-gray-100 pt-20 pb-10 overflow-hidden">
+    <footer className="relative bg-white pt-20 pb-10 overflow-hidden">
+      {/* Strong Separator Line */}
+      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#FF9900] via-[#FF9900] to-blue-500"></div>
+
       {/* Decorative Glow */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-3xl h-[1px] bg-gradient-to-r from-transparent via-[#FF9900] to-transparent opacity-30 shadow-[0_0_20px_#FF9900]"></div>
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-[2px] bg-gradient-to-r from-transparent via-[#FF9900] to-transparent opacity-50 shadow-[0_0_30px_#FF9900]"></div>
 
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
@@ -14,7 +17,7 @@ export default function Footer() {
             <Link href="/" className="flex items-center gap-3 mb-6 group">
               <div className="relative">
                 <img
-                  src="/logo.jpg"
+                  src="/aws-logo.jpg"
                   alt="AWS Cloud Club IIT Madras"
                   className="w-12 h-12 rounded-full border-2 border-transparent group-hover:border-[#FF9900] transition-all object-cover"
                 />

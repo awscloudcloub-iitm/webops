@@ -46,13 +46,6 @@ const teams = {
         initials: "SM",
       },
       {
-        name: "Riya Saini",
-        role: "Graphics & Design",
-        description: "Designing visual elements and brand materials",
-        avatar: "/avatar2.png",
-        initials: "RS",
-      },
-      {
         name: "Parth Chitranshi",
         role: "Event Coordinator",
         description: "Organizing and coordinating club events",
@@ -95,9 +88,12 @@ export default function TeamPage() {
   const currentTeam = teams[selectedYear];
 
   return (
-    <div className="flex flex-col pt-20">
+    <div className="flex flex-col pt-20 bg-white">
+      {/* Scrolling Grid Background */}
+      <div className="scrolling-grid"></div>
+
       {/* Hero Section */}
-      <section className="relative pt-2 pb-20 px-4 md:pt-8 md:pb-32 overflow-hidden bg-white">
+      <section className="relative pt-2 pb-10 px-4 md:pt-8 md:pb-12 overflow-hidden bg-white">
         <div className="absolute inset-0 bg-gradient-to-b from-blue-50 to-transparent pointer-events-none"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
@@ -142,9 +138,9 @@ export default function TeamPage() {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">Leadership Team</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {currentTeam.leadership.map((member, index) => (
-              <Card key={index} className="hover:shadow-lg transition-shadow">
+              <Card key={index} className="hover:shadow-lg transition-all border-2 border-[#FF9900]">
                 <CardHeader className="text-center">
                   <div className="flex justify-center mb-4">
                     <Avatar className="w-24 h-24">
@@ -186,7 +182,7 @@ export default function TeamPage() {
             <h2 className="text-3xl font-bold text-center mb-12">Core Team</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
               {currentTeam.coreTeam.map((member: any, index: number) => (
-                <Card key={index} className="hover:shadow-lg transition-shadow">
+                <Card key={index} className="hover:shadow-lg transition-all border-2 border-[#FF9900]">
                   <CardHeader className="flex flex-row items-center gap-4">
                     <Avatar className="w-16 h-16">
                       <AvatarFallback className="bg-gradient-to-br from-orange-300 to-blue-300 text-white">
